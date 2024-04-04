@@ -1,0 +1,8 @@
+<?php
+
+$numero = 2;
+$limite = 20;
+for ($numero; $numero <= $limite;
+     $numero += 2 ){
+  echo $numero. "\n";
+  }
