@@ -1,0 +1,19 @@
+<?php
+
+$numero = 10;
+
+if (!is_numeric($numero)) {
+	echo "numero invalido!";
+	exit;
+}
+
+$multiplicador = 1;
+
+while ($multiplicador <= 10) {
+	$resultado = $numero * $multiplicador;
+	
+	echo "$numero x $multiplicador = $resultado\n";
+	
+	$multiplicador++;
+}
+?>
