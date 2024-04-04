@@ -1,0 +1,6 @@
+<?php
+$numero = 2;
+whilre ($numero<= 20 ) {
+  echo $numero. "\n";
+  $numero++;
+  }
