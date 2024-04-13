@@ -1,0 +1,43 @@
+<?php
+
+function calcularMediaAluno($nota1, $nota2, $nota3, $nota4) {
+  
+  if (empty($nota1) || empty($nota2) || empty($nota3) || empty($nota4)) {
+    echo "Erro: Todas as notas precisam ser informadas.";
+    return;
+  }
+
+  
+  if ($nota1 < 0 || $nota1 > 10 || $nota2 < 0 || $nota2 > 10 || $nota3 < 0 || $nota3 > 10 || $nota4 < 0 || $nota4 > 10) {
+    echo "Erro: As notas devem estar entre 0 e 10.";
+    return;
+  }
+
+  
+  $media = ($nota1 + $nota2 + $nota3 + $nota4) / 4;
+
+  
+  echo "**Notas do Aluno: critian **\n";
+  echo "Nota 1: $nota1\n";
+  echo "Nota 2: $nota2\n";
+  echo "Nota 3: $nota3\n";
+  echo "Nota 4: $nota4\n";
+  echo "Média: $media\n";
+
+  
+  if ($media >= 7) {
+    echo "**Situação:** Aprovado";
+  } elseif ($media >= 5 && $media < 7) {
+    echo "**Situação:** Recuperação";
+  } else {
+    echo "**Situação:** Reprovado";
+  }
+}
+
+
+$nota1 = 8.5;
+$nota2 = 7.2;
+$nota3 = 9.1;
+$nota4 = 6.8;
+
+calcularMediaAluno($nota1, $nota2, $nota3, $nota4);
