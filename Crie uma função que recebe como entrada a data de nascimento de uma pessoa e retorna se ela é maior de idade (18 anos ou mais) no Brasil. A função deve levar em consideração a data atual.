@@ -1,0 +1,28 @@
+<?php
+
+function isMaiorDeIdade($dataNascimento) {
+  
+  $dataNascimento = new DateTime($dataNascimento);
+
+  
+  $dataAtual = new DateTime('now');
+
+  
+  $anos = $diferenca->y;
+
+  
+  if ($anos >= 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+$dataNascimento = "2015-02-23";
+
+if (isMaiorDeIdade($dataNascimento)) {
+  echo "A pessoa é maior de idade.";
+} else {
+  echo "A pessoa é menor de idade.";
+}
